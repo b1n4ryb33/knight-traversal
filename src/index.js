@@ -12,17 +12,14 @@ import "@fortawesome/fontawesome-free/js/solid";
 import "@fortawesome/fontawesome-free/js/regular";
 import "@fortawesome/fontawesome-free/js/brands";
 
-import { sampleComponent } from "./sample-component/sample-component";
+import { knight } from "./knight-component/knight";
 
-function component() {
-    const element = document.createElement('div');
-    let sampleComponentTest = sampleComponent();
-    element.innerHTML = sampleComponentTest.sayHello();
-  
-    return element;
-  
-  }
-  
+let knighty = knight();
+// knighty.printBoard();
 
+// console.log(knighty.calculateNextMoves([3,3]));
+// console.log(knighty.calculateNextMoves([1,1]));
 
-  document.body.appendChild(component());
+let moves = knighty.move([0,0], [7,7]);
+
+console.dir(moves);
